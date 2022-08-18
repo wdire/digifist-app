@@ -1,0 +1,318 @@
+@font-face {
+  font-family: "ITC Avant Garde Gothic Pro";
+  src: url("./assets/fonts/ITCAvantGardeGothicPro/ITCAvantGardePro-Bk.otf")
+    format("opentype");
+  font-weight: light;
+}
+
+@font-face {
+  font-family: "ITC Avant Garde Gothic Pro";
+  src: url("./assets/fonts/ITCAvantGardeGothicPro/ITCAvantGardePro-Md.otf")
+    format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "ITC Avant Garde Gothic Pro";
+  src: url("./assets/fonts/ITCAvantGardeGothicPro/ITCAvantGardePro-Demi.otf")
+    format("opentype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "ITC Avant Garde Gothic Pro";
+  src: url("./assets/fonts/ITCAvantGardeGothicPro/ITCAvantGardePro-Bold.otf")
+    format("opentype");
+  font-weight: 700;
+}
+/*
+  Note: I didn't received other font files for below font. 
+  For some places that it should be light or bold is just at normal font weight for now.
+*/
+@font-face {
+  font-family: "Avenir";
+  src: url("./assets/fonts/Avenir/Avenir.ttc") format("truetype");
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.main_container {
+  height: 100%;
+}
+
+.split_container {
+  display: flex;
+  width: 100%;
+}
+
+.split_image {
+  width: 100%;
+  height: 100vh;
+  background: url("./assets/images/bg\ copy.png");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.details {
+  padding: 96px 0px 10px 120px;
+  position: relative;
+  width: 720px;
+}
+
+.details_text {
+  padding-right: 106px;
+}
+
+.details_title {
+  font-family: "ITC Avant Garde Gothic Pro", sans-serif;
+  font-weight: 700;
+  font-size: 31.25px;
+  line-height: 130%;
+  margin-bottom: 12px;
+}
+
+.details_desc {
+  font-family: "Avenir", sans-serif;
+  font-size: 16px;
+  line-height: 160%;
+  color: #666666;
+  margin-bottom: 32px;
+}
+
+.details_link {
+  text-decoration: none;
+  font-family: "Avenir", sans-serif;
+  font-weight: 900;
+  font-size: 12.8px;
+  line-height: 17px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+  transition: color 0.4s ease;
+}
+
+.products_list {
+  position: relative;
+  margin-top: 74px;
+  margin-bottom: 100px;
+  max-width: 100%;
+}
+
+.products_list_wrapper {
+  width: 300px;
+}
+
+.product_item {
+  display: inline-block;
+  position: relative;
+  width: 230px;
+  height: 363px;
+  overflow: hidden;
+}
+
+.product_image {
+  overflow: hidden;
+}
+
+.product_image img {
+  height: 310px;
+  width: 230px;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+
+.product_details {
+  height: 53px;
+  padding-top: 12px;
+  font-family: "Avenir", sans-serif;
+}
+
+.product_title {
+  font-weight: 400;
+  font-size: 12.8px;
+  line-height: 20.48px;
+  font-weight: 300;
+}
+
+.product_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product_price {
+  font-size: 12.8px;
+  line-height: 20.48px;
+  font-weight: bold;
+}
+
+.product_color-options {
+  display: flex;
+  gap: 8px;
+}
+
+.product_color {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--bg-color);
+  cursor: pointer;
+}
+
+.product_color.active {
+  border: 1px solid black;
+  background: none !important;
+}
+
+.product_color_dot {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background: var(--bg-color);
+}
+
+.product_color.blue {
+  --bg-color: #99c3cc;
+}
+
+.product_color.red {
+  --bg-color: #cc9999;
+}
+
+.product_color.purple {
+  --bg-color: #cb99cc;
+}
+
+.product_color.green {
+  --bg-color: #a6cc99;
+}
+
+.products_button {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  top: 135px;
+  z-index: 10;
+  text-align: center;
+  line-height: 43px;
+}
+
+.products_button.right {
+  right: 40px;
+}
+
+@media only screen and (max-width: 1050px) {
+  .details {
+    min-width: 400px;
+    padding: 40px 0px 10px 50px;
+  }
+
+  .details_text {
+    padding-right: 20px;
+  }
+
+  .split_image {
+    min-width: 255px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .details {
+    width: 100%;
+    min-width: initial;
+    margin-top: -220px;
+  }
+
+  .split_container {
+    flex-direction: column;
+  }
+
+  .split_image {
+    position: relative;
+    height: 57vh;
+  }
+
+  .split_image::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    opacity: 0.5;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 78.65%);
+  }
+
+  .details_link {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+  }
+
+  .details_title {
+    color: #fff;
+    font-size: 26px;
+  }
+
+  .details_desc {
+    display: none;
+  }
+
+  .products_list {
+    margin-top: 32px;
+  }
+
+  .product_item {
+    width: 148px;
+    height: 293px;
+  }
+
+  .product_image img {
+    width: 148px;
+    height: 200px;
+  }
+
+  .product_details {
+    padding-top: 8px;
+  }
+
+  .product_info {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .product_color-options {
+    margin-top: 8px;
+  }
+
+  .products_button {
+    display: none;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .details_title {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .details {
+    padding: 29px 0px 20px 24px;
+  }
+}

@@ -3,49 +3,141 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
     <title>Digifist Assignment</title>
   </head>
   <body>
     <div class="main_container">
       <div class="split_container">
-        <div class="fullsize_image">
-          <img
-            src="./assets/images/yellow-wearing-girl.png"
-            alt="Yellow wearing girl"
-          />
-        </div>
+        <div class="split_image"></div>
         <div class="details">
-          <div class="details_title">
-            Everyday items, we have something to suit every occasion.
+          <div class="details_text">
+            <div class="details_title">
+              Everyday items, we have something to suit every occasion.
+            </div>
+            <div class="details_desc">
+              At suspendisse augue lectus arcu, accumsan ut sit posuere vitae
+              sit tincidunt semper eu proin leo gravida cursus.
+            </div>
+
+            <a class="details_link">Shop All Everyday Items</a>
           </div>
-          <div class="details_desc">
-            At suspendisse augue lectus arcu, accumsan ut sit posuere vitae sit
-            tincidunt semper eu proin leo gravida cursus.
-          </div>
-          <a class="details_link">Shop all everyday items</a>
 
           <div class="products_list">
-            <div class="product_item">
-              <div class="product_image">
-                <img src="./assets/images/clothe-1.png" alt="Product 1" />
-              </div>
-              <div class="product_details">
-                <div class="product_title">365 Signature Hoodie</div>
-                <div class="product_info">
-                  <div class="product_price">€33.95</div>
-                  <div class="product_color-options">
-                    <div class="product_color blue"></div>
-                    <div class="product_color red"></div>
-                    <div class="product_color purple"></div>
-                    <div class="product_color green"></div>
+            <div class="products_button right">
+              <svg
+                width="8"
+                height="14"
+                viewBox="0 0 8 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0.646447 0.646447C0.841709 0.451184 1.15829 0.451184 1.35355 0.646447L7.35355 6.64645C7.54882 6.84171 7.54882 7.15829 7.35355 7.35355L1.35355 13.3536C1.15829 13.5488 0.841709 13.5488 0.646447 13.3536C0.451184 13.1583 0.451184 12.8417 0.646447 12.6464L6.29289 7L0.646447 1.35355C0.451184 1.15829 0.451184 0.841709 0.646447 0.646447Z"
+                  fill="black"
+                />
+              </svg>
+            </div>
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide product_item">
+                  <div class="product_image">
+                    <img src="./assets/images/clothe-1.png" alt="Product 1" />
+                  </div>
+                  <div class="product_details swiper-no-swiping">
+                    <div class="product_title">365 Signature Hoodie</div>
+                    <div class="product_info">
+                      <div class="product_price">€33.95</div>
+                      <div class="product_color-options">
+                        <div class="product_color blue active">
+                          <div class="product_color_dot"></div>
+                        </div>
+                        <div class="product_color red">
+                          <div class="product_color_dot"></div>
+                        </div>
+                        <div class="product_color purple">
+                          <div class="product_color_dot"></div>
+                        </div>
+                        <div class="product_color green">
+                          <div class="product_color_dot"></div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
+                <div class="swiper-slide product_item">
+                  <div class="product_image">
+                    <img src="./assets/images/clothe-2.png" alt="Product 2" />
+                  </div>
+                  <div class="product_details swiper-no-swiping">
+                    <div class="product_title">
+                      Organic Skinny High Waist Jeans
+                    </div>
+                    <div class="product_info">
+                      <div class="product_price">€33.95</div>
+                      <div class="product_color-options">
+                        <div class="product_color blue active">
+                          <div class="product_color_dot"></div>
+                        </div>
+                        <div class="product_color red">
+                          <div class="product_color_dot"></div>
+                        </div>
+                        <div class="product_color purple">
+                          <div class="product_color_dot"></div>
+                        </div>
+                        <div class="product_color green">
+                          <div class="product_color_dot"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide product_item">
+                  <div class="product_image">
+                    <img src="./assets/images/clothe-3.png" alt="Product 3" />
+                  </div>
+                  <div class="product_details swiper-no-swiping">
+                    <div class="product_title">
+                      Organic Skinny High Waist Jeans
+                    </div>
+                    <div class="product_info">
+                      <div class="product_price">€33.95</div>
+                      <div class="product_color-options">
+                        <div class="product_color blue active">
+                          <div class="product_color_dot"></div>
+                        </div>
+                        <div class="product_color red">
+                          <div class="product_color_dot"></div>
+                        </div>
+                        <div class="product_color purple">
+                          <div class="product_color_dot"></div>
+                        </div>
+                        <div class="product_color green">
+                          <div class="product_color_dot"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide product_item"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>
